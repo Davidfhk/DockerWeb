@@ -1,2 +1,3 @@
 # DockerWeb
-Proyecto web para la creación de un frontal, para Docker
+Project panel to use Docker [developing]
+
