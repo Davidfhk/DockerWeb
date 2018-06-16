@@ -20,9 +20,22 @@ class DockerController
     }
 
 	public function home (Request $request, Response $response, $args)
+    {     
+        return $this->view->render($response, 'home.twig'); 
+    }
+
+    public function containerForm (Request $request, Response $response, $args)
     {
-       
-        return $this->view->render($response, 'home.twig');
-   
+    	return $this->view->render($response, 'containerForm.twig');
+    }
+
+    public function containersBars (Request $request, Response $response, $args)
+    {
+    	return $this->view->render($response, 'containersBars.twig');
+    }
+
+    public function containerCMS (Request $request, Response $response, $args)
+    {
+        return $this->view->render($response, 'containerCMS.twig');
     }
 }
