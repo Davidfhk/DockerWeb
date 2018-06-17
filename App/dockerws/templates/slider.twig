@@ -2,7 +2,7 @@
 
 {% block containersBars %}
 <!-- page content -->
-<div class="right_col" role="main">
+<div class="right_col" role="main" >
 	<div class="">
 		<div class="page-title">
 			<div class="title_left">
@@ -44,47 +44,26 @@
 			</div>
 			<div class="x_content">
 				<div class="row grid_slider">
-
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<p>Default grid slider with min and max values</p>
-						<input type="text" id="range" value="" name="range" />
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<p>Grid with slider labels are far away outside it's container</p>
-						<input type="text" id="range_25" value="" name="range" />
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<p>Grid with labels inside container using force_edges attribute</p>
-						<input type="text" id="range_27" value="" name="range" />
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<p>Create Grid with pre-defined steps</p>
-						<input type="text" id="range_26" value="" name="range" />
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<p>Prevent one from dragging the labels</p>
-						<input type="text" id="range_31" value="" name="range" />
-					</div>
-					<div class="col-md-6 col-sm-6 col-xs-12">
-						<p>Grid with minimum and maximum values</p>
-						<input type="text" class="range_min_max" value="" name="range" />
-					</div>
-					<div>
-						<p>Grid With time in 24 hour format</p>
-						<input type="text" class="range_time24" value="" name="range" />
-					</div>
+					<form action="{{path_for('slider')}}" method="post">
+					  <div class="form-group">
+					    <label for="containers-range">Create Containers</label>
+					    <input type="range" class="form-control-range" id="containers-range" value="0" min="0" max="100" name="slider">
+					    <input type="submit" value="Create">
+					  </div>
+					</form>
 				</div>
 			</div>
 		</div>
-		<br />
-		<br />
+		<br/>
+		<br/>
 	</div>
 
 <!-- /form grid slider -->
 
 <!-- Smart Wizard -->
 	<div class="progress">
-		<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+		<div class="progress-bar mb-5" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
 	</div> 
 </div>  
+
 {% endblock %}

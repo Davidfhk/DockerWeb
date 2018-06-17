@@ -26,12 +26,20 @@ class DockerController
 
     public function containerForm (Request $request, Response $response, $args)
     {
+        if(!empty($_POST))
+        {
+            $this->model->containerForm($_POST);
+        }
     	return $this->view->render($response, 'containerForm.twig');
     }
 
-    public function containersBars (Request $request, Response $response, $args)
+    public function slider (Request $request, Response $response, $args)
     {
-    	return $this->view->render($response, 'containersBars.twig');
+        if(!empty($_POST['slider']))
+        {
+            $this->model->slider(intval($_POST['slider']));
+        }
+    	return $this->view->render($response, 'slider.twig');
     }
 
     public function containerCMS (Request $request, Response $response, $args)
